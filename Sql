@@ -1,0 +1,75 @@
+
+
+create table student(Roll int(2) Primary key,Name Varchar(20)not null,class char(15) null ,section char(1)
+,marks int(20));
+
+insert into student values(1,"anurag","4th","A",98);
+insert into student values(2,"Rahul","4th","b",98);
+insert into student values(3,"Karan","4th","c",98);
+insert into student values(4,"ang","3th","A",93);
+insert into student values(5,"urag","2th","A",98);
+insert into student values(6,"rag","4th","A",98);
+insert into student values(7,"anu","1th","A",95);
+insert into student values(8,"suraj","4th","b",94);
+insert into student values(9,"ga","4th","c",98);
+
+
+
+delete from student where Roll=3;
+
+/*select DISTINCT class from student;
+
+select Name,Roll from student where class ="4th";
+
+select Name,Roll from student where Name like"s%";*/
+
+/*select Name,Roll from student where marks between 94 and 96;
+*/
+/*
+select roll,Name from student where section in ('b','c');
+*/
+
+/*select roll,Name from student where marks<95 order by name desc;
+*/
+
+/*select roll,Name from student where section not in ('b','c');*/
+
+/*   UPDATE  */
+
+/*update student set marks=90 where roll=4;
+*/
+
+/*update student set marks=marks+10 where roll=4;
+marks-10
+*/
+/*
+update student set marks=null where roll=4;
+*/
+
+/*select avg(marks) from student;
+
+select max(marks) from student;
+*/
+select max(marks) from student GROUP by section having max(marks)<95;
+
+select * from student;
+
+
+create table teacher(No int(2) Primary key,Name Varchar(20)not null,stan char(15) null ,section char(1)
+,sol int(20));
+insert into teacher values(1,"Rah","4th","A",98);
+insert into teacher values(2,"Rahul","4th","b",98);
+insert into teacher values(3,"Karan","4th","c",98);
+insert into teacher values(4,"an","3th","A",93);
+insert into teacher values(5,"ghj","2th","A",98);
+insert into teacher values(6,"dsf","4th","A",98);
+insert into teacher values(7,"nng","1th","A",95);
+insert into teacher values(8,"sj","4th","b",94);
+insert into teacher values(9,"a","4th","c",98);
+
+select * from student;
+
+select * from student join teacher;
+
+select * from student cross join teacher;
+
